@@ -49,6 +49,11 @@
     XCTAssertTrue([dec isEqualToString:[userItemDic description]]);
 }
 
+- (void)testInitDictionaryOtherType {
+    MSObject *msObject= [[MSObject alloc] initWithDictionary:(id)[NSNull null]];
+    XCTAssertNil(msObject);
+}
+
 - (void)testInitWithNilData {
    XCTAssertNil([[MSObject alloc] initWithData:nil error:nil]);
 }
