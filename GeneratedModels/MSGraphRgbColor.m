@@ -24,7 +24,7 @@
 
 - (Byte) r
 {
-    _r = self.dictionary[@"r"];
+    _r = [((NSNumber *)self.dictionary[@"r"]) unsignedCharValue];
     return _r;
 }
 
@@ -36,7 +36,7 @@
 
 - (Byte) g
 {
-    _g = self.dictionary[@"g"];
+    _g = [((NSNumber *)self.dictionary[@"g"]) unsignedCharValue];
     return _g;
 }
 
@@ -48,7 +48,7 @@
 
 - (Byte) b
 {
-    _b = self.dictionary[@"b"];
+    _b = [((NSNumber *)self.dictionary[@"b"]) unsignedCharValue];
     return _b;
 }
 
